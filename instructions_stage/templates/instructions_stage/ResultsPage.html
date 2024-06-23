@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h1>Results for this round </h1>
+
+    <p>Average: {{ average }}</p>
+    <p>2/3 of Average: {{ two_thirds_average }}</p>
+
+    <h3>Histogram of this round</h3>
+    <img src="data:image/png;base64,{{ histogram_image }}" alt="Histogram">
+
+    <form method="post">
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+
+{% endblock %}
+

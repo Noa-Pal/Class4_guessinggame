@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h1>Enter your guess for this round</h1>
+
+    <form method="post">
+        {% if round_number == 1 %}
+            {% formfield player.guess1 %}
+        {% elif round_number == 2 %}
+            {% formfield player.guess2 %}
+        {% elif round_number == 3 %}
+            {% formfield player.guess3 %}
+        {% elif round_number == 4 %}
+            {% formfield player.guess4 %}
+        {% endif %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
